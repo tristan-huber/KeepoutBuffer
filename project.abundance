@@ -7,19 +7,20 @@
   "ioValues": [
     {
       "name": "shape",
-      "ioValue": 10
+      "ioValue": 10,
+      "currentEquation": "10"
     },
     {
       "name": "x_buffer",
-      "ioValue": 10
+      "ioValue": 1
     },
     {
       "name": "y_buffer",
-      "ioValue": 10
+      "ioValue": 0
     },
     {
       "name": "z_buffer",
-      "ioValue": 10
+      "ioValue": 0
     }
   ],
   "topLevel": true,
@@ -72,10 +73,19 @@
     },
     {
       "atomType": "Assembly",
-      "x": 0.6106770833333334,
-      "y": 0.5386904761904762,
+      "x": 0.6328125,
+      "y": 0.36607142857142855,
       "uniqueID": "id-61",
-      "ioValues": []
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        }
+      ]
     },
     {
       "atomType": "Input",
@@ -107,8 +117,8 @@
     },
     {
       "atomType": "Move",
-      "x": 0.2799479166666667,
-      "y": 0.6607142857142857,
+      "x": 0.31640625,
+      "y": 0.23809523809523808,
       "uniqueID": "id-82",
       "ioValues": [
         {
@@ -117,7 +127,7 @@
         },
         {
           "name": "xDist",
-          "ioValue": 0
+          "ioValue": 1
         },
         {
           "name": "yDist",
@@ -138,10 +148,23 @@
       "ioValues": [
         {
           "name": "x",
-          "ioValue": 10
+          "ioValue": 1
         }
       ],
       "currentEquation": "-1 * x"
+    },
+    {
+      "atomType": "Color",
+      "x": 0.3912760416666667,
+      "y": 0.24404761904761904,
+      "uniqueID": "id-92",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "selectedColor": "Keep Out"
     }
   ],
   "allConnectors": [
@@ -156,9 +179,29 @@
       "ap2ID": "id-82"
     },
     {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-54",
+      "ap2ID": "id-61"
+    },
+    {
       "ap2Name": "x",
       "ap1ID": "id-73",
       "ap2ID": "id-88"
+    },
+    {
+      "ap2Name": "xDist",
+      "ap1ID": "id-73",
+      "ap2ID": "id-82"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-82",
+      "ap2ID": "id-92"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-92",
+      "ap2ID": "id-61"
     }
   ],
   "unitsKey": "Unitless",
