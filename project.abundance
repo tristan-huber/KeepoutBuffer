@@ -1,13 +1,167 @@
 {
-    "atomType": "Molecule",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "id-47",
-    "name": "KeepoutBuffer",
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "Unitless",
-    "fileTypeVersion": 1,
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "id-47",
+  "name": "KeepoutBuffer",
+  "ioValues": [
+    {
+      "name": "shape",
+      "ioValue": 10
+    },
+    {
+      "name": "x_buffer",
+      "ioValue": 10
+    },
+    {
+      "name": "y_buffer",
+      "ioValue": 10
+    },
+    {
+      "name": "z_buffer",
+      "ioValue": 10
+    }
+  ],
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Output",
+      "x": 0.98,
+      "y": 0.5,
+      "uniqueID": "id-48",
+      "ioValues": [
+        {
+          "name": "number or geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.16015625,
+      "y": 0.8660714285714286,
+      "uniqueID": "id-50",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 20,
+          "currentEquation": "20"
+        },
+        {
+          "name": "y length",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.2669270833333333,
+      "y": 0.8571428571428571,
+      "uniqueID": "id-54",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 5,
+          "currentEquation": "5"
+        }
+      ]
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.6106770833333334,
+      "y": 0.5386904761904762,
+      "uniqueID": "id-61",
+      "ioValues": []
+    },
+    {
+      "atomType": "Input",
+      "x": 0.0231,
+      "y": 0.27976190476190477,
+      "uniqueID": "id-70",
+      "name": "shape"
+    },
+    {
+      "atomType": "Input",
+      "x": 0.0231,
+      "y": 0.4464285714285714,
+      "uniqueID": "id-73",
+      "name": "x_buffer"
+    },
+    {
+      "atomType": "Input",
+      "x": 0.0231,
+      "y": 0.5922619047619048,
+      "uniqueID": "id-76",
+      "name": "y_buffer"
+    },
+    {
+      "atomType": "Input",
+      "x": 0.0231,
+      "y": 0.7232142857142858,
+      "uniqueID": "id-79",
+      "name": "z_buffer"
+    },
+    {
+      "atomType": "Move",
+      "x": 0.2799479166666667,
+      "y": 0.6607142857142857,
+      "uniqueID": "id-82",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Equation",
+      "x": 0.138671875,
+      "y": 0.3273809523809524,
+      "uniqueID": "id-88",
+      "name": "-1 * x",
+      "ioValues": [
+        {
+          "name": "x",
+          "ioValue": 10
+        }
+      ],
+      "currentEquation": "-1 * x"
+    }
+  ],
+  "allConnectors": [
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-50",
+      "ap2ID": "id-54"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-54",
+      "ap2ID": "id-82"
+    },
+    {
+      "ap2Name": "x",
+      "ap1ID": "id-73",
+      "ap2ID": "id-88"
+    }
+  ],
+  "unitsKey": "Unitless",
+  "fileTypeVersion": 1,
+  "filetypeVersion": 1
 }
